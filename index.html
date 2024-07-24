@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://tathmeer.aldayel.org/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tathmeer International</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://tathmeer.aldayel.org/favicon.ico">
+    <link rel="stylesheet" href="./Tathmeer International_files/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./Tathmeer International_files/logo.svg" alt="Tathmeer International Logo" class="logo">
+        <div class="language-tabs">
+            <button id="en-tab" class="lang-tab active" onclick="switchLanguage(&#39;en&#39;)">
+                <img src="./Tathmeer International_files/us.svg" alt="English"> English
+            </button>
+            <button id="ar-tab" class="lang-tab" onclick="switchLanguage(&#39;ar&#39;)">
+                <img src="./Tathmeer International_files/sa.svg" alt="Arabic"> عربي
+            </button>
+            <button id="zh-tab" class="lang-tab" onclick="switchLanguage(&#39;zh&#39;)">
+                <img src="./Tathmeer International_files/cn.svg" alt="Chinese"> 中文
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-box" id="en-content" style="display: block;">
+            <h1>Welcome to Tathmeer International</h1>
+            <p>Your trusted partner for high-quality scout clothing, military uniforms, trekking equipment, and medical devices. With a commitment to excellence and innovation, we cater to diverse needs across various industries, ensuring top-notch products and services.</p>
+            <h2>A global leader in quality and innovation.</h2>
+            <h3>Featured Services</h3>
+            <p>Explore our range of services designed to meet your specific needs: Scout Clothing and Accessories, Military Clothing and Uniforms, Trekking and Camping Equipment, Medical Devices.</p>
+            <h3>Testimonials</h3>
+            <p>Here's what our clients say about us: 'Outstanding quality and service.' - Client A, 'Reliable and innovative products.' - Client B.</p>
+            <h3>Call to Action</h3>
+            <p>Contact us today to learn more about how Tathmeer International can serve you.</p>
+        </section>
+
+        <section class="content-box" id="ar-content" dir="rtl" style="display: none;">
+            <h1>مرحبًا بكم في تثمير الدولية</h1>
+            <p>شريككم الموثوق للملابس الكشفية عالية الجودة والملابس العسكرية ومعدات التخييم والأجهزة الطبية. مع التزامنا بالتميز والابتكار، نخدم احتياجات متنوعة عبر مختلف الصناعات، ونضمن منتجات وخدمات من الدرجة الأولى.</p>
+            <h2>رائد عالمي في الجودة والابتكار.</h2>
+            <h3>خدمات مميزة</h3>
+            <p>استكشف مجموعة خدماتنا المصممة لتلبية احتياجاتك الخاصة: الملابس الكشفية والإكسسوارات، الملابس العسكرية والأزياء، معدات التخييم، الأجهزة الطبية.</p>
+            <h3>شهادات العملاء</h3>
+            <p>إليك ما يقوله عملاؤنا عنا: 'جودة وخدمة ممتازة.' - العميل أ، 'منتجات موثوقة ومبتكرة.' - العميل ب.</p>
+            <h3>دعوة إلى العمل</h3>
+            <p>اتصل بنا اليوم لمعرفة المزيد حول كيفية خدمة شركة تثمير الدولية لك.</p>
+        </section>
+
+        <section class="content-box" id="zh-content" style="display: none;">
+            <h1>欢迎来到Tathmeer国际</h1>
+            <p>您可信赖的高品质侦察服、军装、徒步装备和医疗设备的合作伙伴。我们致力于卓越和创新，满足各行各业的多样化需求，确保一流的产品和服务。</p>
+            <h2>质量和创新的全球领导者。</h2>
+            <h3>特色服务</h3>
+            <p>探索我们为满足您的特定需求而设计的服务范围：侦察服和配件、军装、徒步和露营装备、医疗设备。</p>
+            <h3>客户评价</h3>
+            <p>这是我们的客户对我们的评价：'杰出的质量和服务。' - 客户A，'可靠和创新的产品。' - 客户B。</p>
+            <h3>行动呼吁</h3>
+            <p>今天联系我们，了解Tathmeer国际如何为您服务。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 © Tathmeer International. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.content-box').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang + '-content').style.display = 'block';
+            document.getElementById(lang + '-tab').classList.add('active');
+        }
+        
+        // Set default language
+        document.addEventListener('DOMContentLoaded', function () {
+            switchLanguage('en');
+        });
+    </script>
+
+
+
+</body></html>
