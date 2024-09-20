@@ -225,10 +225,6 @@
 
 .responsive { width: 100%; height: auto;}
 
-.hide-on-small {
-    font-size: 1.2em;
-    color: #555;
-}
 
 /* Responsive design */
 @media (max-width: 600px) {
