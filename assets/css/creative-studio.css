@@ -11784,8 +11784,9 @@ pre .code {
 .header {
   height: 100%;
   min-height: 600px;
-  background: url(../imgs/header.jpg) no-repeat center center fixed;
+  background: url(../imgs/header-fabric.jpg) no-repeat center center fixed;
   background-size: cover;
+  position: relative; /* Ensure that the overlay stays within the header */
 }
 
 .header .overlay {
@@ -11796,35 +11797,27 @@ pre .code {
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  
+  display: flex; /* Flexbox layout */
+  flex-direction: column;
+  justify-content: flex-end; /* Align the content at the bottom */
+  align-items: center;
+  
+  padding-bottom: 100px; /* Adjust this value to move the content lower */
 }
 
 .header .overlay .subtitle {
-  margin-top: -20px;
+  margin-top: 0; /* No need for negative margins */
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 300;
+  margin-bottom: 20px; /* Add space between subtitle and title */
 }
 
 .header .overlay .title {
   font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1200 - 320)));
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Adjust space below title */
 }
+
 
 @media (max-width: 767.98px) {
   .header .overlay .subtitle {
