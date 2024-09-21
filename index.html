@@ -45,6 +45,23 @@
     <!-- End Of Page Navigation -->
 
     <header class="header">
+          <script>
+    window.onload = function() {
+      const images = [
+        '../imgs/header-fabric.jpg',
+        '../imgs/header-fabric1.jpg',
+        '../imgs/header-fabric2.jpg',
+        '../imgs/header-fabric3.jpg',
+        '../imgs/header-fabric4.jpg'
+      ];
+
+      // Randomly select an image from the array
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+
+      // Set the background image of the .header element
+      document.querySelector('.header').style.backgroundImage = `url(${randomImage})`;
+    };
+          </script>
         <div class="overlay">
             <h6 class="subtitle">Small Team With Big Ideas</h6>
             <h1 class="title">Tathmeer International</h1>
