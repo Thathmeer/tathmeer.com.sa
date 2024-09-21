@@ -225,10 +225,4 @@
 
 .responsive { width: 100%; height: auto;}
 
-/* Responsive design */
-@media (max-width: 600px) {
-    [data-hide="small-screen"] {
-        display: none; /* Hide elements with this data attribute */
-    }
-}
 
