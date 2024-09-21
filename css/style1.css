@@ -227,11 +227,8 @@
 
 /* Responsive design */
 @media (max-width: 600px) {
-    #hide-small-team {
-        display: none; /* Hide the h6 element on small screens */
-    }
-
-    #hide-title {
-        display: none; /* Hide the h1 element on small screens */
+    [data-hide="small-screen"] {
+        display: none; /* Hide elements with this data attribute */
     }
 }
+
