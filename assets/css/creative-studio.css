@@ -11561,6 +11561,8 @@ pre .code {
   -webkit-transition: all, 0.33s;
   transition: all, 0.33s;
   padding: 0 10px;
+  background-color: snow;
+  color: #17202a;
 }
 
 @media (prefers-reduced-motion: reduce) {
