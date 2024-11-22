@@ -197,6 +197,49 @@ p.codrops-demos a.current-demo:hover{
     height: 100%;
 }
 
+.founder-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 0.5em;
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1em;
+}
+
 /* Media Queries */
 @media screen and (max-width: 767px) {
 	.container > header{
