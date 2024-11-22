@@ -197,11 +197,24 @@ p.codrops-demos a.current-demo:hover{
     height: 100%;
 }
 
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+	.container > header{
+		text-align: center;
+	}
+	p.codrops-demos {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
+
 .founder-section {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the image and text */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .image-container {
@@ -240,14 +253,19 @@ p.codrops-demos a.current-demo:hover{
     margin-bottom: 1em;
 }
 
-/* Media Queries */
-@media screen and (max-width: 767px) {
-	.container > header{
-		text-align: center;
-	}
-	p.codrops-demos {
-		position: relative;
-		top: auto;
-		left: auto;
-	}
+/* Optional: Media query for small screens */
+@media (max-width: 768px) {
+    .founder-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container, .text-content {
+        max-width: 100%;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
 }
+
