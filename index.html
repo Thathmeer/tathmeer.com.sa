@@ -132,18 +132,17 @@
     }
 
     /* ── RTL / Language Support ── */
-    html[dir="rtl"] body { font-family: var(--font-arabic); }
+    html[dir="rtl"] body { direction: rtl; text-align: right; font-family: var(--font-arabic); }
     html[lang="zh"] body  { font-family: var(--font-chinese); }
 
     html[dir="rtl"] .navbar-nav { margin-right: auto; margin-left: 0 !important; }
-    html[dir="rtl"] .section-subtitle, html[dir="rtl"] .section-title { text-align: right; }
-    html[dir="rtl"] .footer-lists { flex-direction: row-reverse; }
+    html[dir="rtl"] .section-label,
+    html[dir="rtl"] .section-heading { text-align: right; }
+    html[dir="rtl"] .footer-grid { direction: rtl; }
     html[dir="rtl"] .contact-card { flex-direction: row-reverse; }
-    html[dir="rtl"] .founder-section { flex-direction: row-reverse; }
+    html[dir="rtl"] .founder-layout { flex-direction: row-reverse; }
     html[dir="rtl"] .competency-grid { direction: rtl; }
     html[dir="rtl"] .nav-link { letter-spacing: 0; }
-    html[dir="rtl"] .item { flex-direction: row-reverse; text-align: right; }
-    html[dir="rtl"] .item i { margin-left: 16px; margin-right: 0; }
 
     /* ── Particles ── */
     #particles-js {
@@ -501,6 +500,39 @@
       width: 100%; height: 100%;
       border: 0;
     }
+    .video-thumbnail {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .video-thumbnail:hover img { transform: scale(1.03); }
+    .play-button {
+      position: absolute;
+      width: 72px; height: 72px;
+      background: rgba(196,154,42,0.92);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 6px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+      transition: transform var(--transition), background var(--transition);
+    }
+    .video-thumbnail:hover .play-button {
+      transform: scale(1.08);
+      background: var(--gold-mid);
+    }
 
     /* ── Timeline (History) ── */
     .timeline {
@@ -826,12 +858,19 @@
 
         <!-- Video -->
         <div class="video-container" role="region" aria-label="Founder video">
-          <iframe
-            src="https://www.youtube.com/watch?v=ho4GSXroSYM"
-            title="Tathmeer International – Founder Dr. Abdullah Al-Shebel"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+          <a href="https://www.youtube.com/watch?v=ho4GSXroSYM"
+             target="_blank"
+             rel="noopener"
+             class="video-thumbnail"
+             aria-label="Watch Dr. Abdullah Al-Shebel interview on YouTube (opens in new tab)">
+            <img
+              src="https://i.ytimg.com/vi/ho4GSXroSYM/hqdefault.jpg"
+              alt="Dr. Abdullah Al-Shebel interview thumbnail"
+              loading="lazy"
+              width="480"
+              height="360">
+            <span class="play-button" aria-hidden="true">▶</span>
+          </a>
         </div>
       </div>
     </section>
